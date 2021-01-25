@@ -1,0 +1,51 @@
+
+EnumType [(g)]
+  title: {*Name*} -- {*Hook*}
+  $NAME
+  $HOOK
+  $DESC
+
+EnumValue [(g)]
+  title: {*Name*} -- {*Hook*}
+  $NAME
+  $HOOK
+  $DESC
+
+DictType [g-book]
+  title: {*Name*} -- {*Hook*}
+  $NAME
+  $HOOK
+  $DESC
+
+FixedKey [->]
+  title: {*Key*} -- {*Hook*}
+  Key 1
+  ValType 1
+  ValExample 1
+  ValDesc spaced [4]
+  $HOOK
+  $DESC
+
+OpenKey [->]
+  title: {*Key*} -- {*Hook*}
+  Key 1
+  KeyType 1
+  KeyExample 1
+  KeyDesc spaced [4]
+  ValType 1
+  ValExample 1
+  ValDesc spaced [4]
+  $HOOK
+  $DESC
+
+
+Technology [bulb]
+  title: {*Name*} -- {*Hook*}
+  $NAME
+  $HOOK
+  Desc spaced [20]
+  HomeURL url
+  DocURL url
+  TutorialURL url
+  WikipediaURL url
+

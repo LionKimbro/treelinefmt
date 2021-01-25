@@ -1,0 +1,102 @@
+{
+   "formats": [
+      {
+         "fields": [
+            {
+               "fieldname": "name",
+               "fieldtype": "OneLineText"
+            },
+            {
+               "fieldname": "hook",
+               "fieldtype": "OneLineText"
+            },
+            {
+               "fieldname": "tags",
+               "fieldtype": "OneLineText"
+            },
+            {
+               "fieldname": "desc",
+               "fieldtype": "SpacedText",
+               "lines": 4
+            },
+            {
+               "fieldname": "url",
+               "fieldtype": "ExternalLink"
+            }
+         ],
+         "formatname": "Basic",
+         "outputlines": [
+            "{*name*}"
+         ],
+         "titleline": "{*name*} -- {*hook*}"
+      },
+      {
+         "fields": [
+            {
+               "fieldname": "Name",
+               "fieldtype": "Text"
+            }
+         ],
+         "formatname": "DEFAULT",
+         "outputlines": [
+            "{*Name*}"
+         ],
+         "titleline": "{*Name*}"
+      },
+      {
+         "fields": [
+            {
+               "fieldname": "name",
+               "fieldtype": "OneLineText"
+            },
+            {
+               "fieldname": "hook",
+               "fieldtype": "OneLineText"
+            }
+         ],
+         "formatname": "FixedKey",
+         "icon": "arrow_4",
+         "outputlines": [
+            "{*name*}"
+         ],
+         "titleline": "{*name*}"
+      }
+   ],
+   "nodes": [
+      {
+         "children": [
+            "86bd23795e2d11eb938760a44c24df47",
+            "3408b6525e3311eba26f60a44c24df47"
+         ],
+         "data": {
+            "Name": "Main"
+         },
+         "format": "DEFAULT",
+         "uid": "036247705e2d11eb95f560a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {},
+         "format": "Basic",
+         "uid": "3408b6525e3311eba26f60a44c24df47"
+      },
+      {
+         "children": [],
+         "data": {
+            "desc": "wha'dai say?\nx x x x x x x",
+            "hook": "hook",
+            "name": "name",
+            "tags": "foo bar baz",
+            "url": "http://slashdot.org/"
+         },
+         "format": "Basic",
+         "uid": "86bd23795e2d11eb938760a44c24df47"
+      }
+   ],
+   "properties": {
+      "tlversion": "3.1.3",
+      "topnodes": [
+         "036247705e2d11eb95f560a44c24df47"
+      ]
+   }
+}
