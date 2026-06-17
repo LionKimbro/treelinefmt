@@ -8,6 +8,7 @@ import inject.injectionspec as injectionspec
 import inject.treeline as treeline
 import inject.args as args
 from inject.args import TREELINEPATH, INJECTIONSPECPATH, PRINTOUTPUT
+from inject.args import SPECIFICFORMATS
 
 
 def inject_format_code(format_name, code):
@@ -23,9 +24,12 @@ def inject_format_code(format_name, code):
 
 
 def inject():
+    to_transfer = args.g[SPECIFICFORMATS]
     for fmt in injectionspec.formats:
+        fmt_name = fmt[injectionspec.NAME]
         code = injectionspec.code_for_format(fmt)
-        inject_format_code(fmt[injectionspec.NAME], code)
+        if (not to_transfer) or (fmt_name in to_transfer):
+            inject_format_code(fmt_name, code)
 
 
 def run():

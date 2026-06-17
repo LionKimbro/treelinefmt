@@ -12,10 +12,12 @@ import argparse
 TREELINEPATH = "TREELINEPATH"
 INJECTIONSPECPATH = "INJECTIONSPECPATH"
 PRINTOUTPUT = "PRINTOUTPUT"
+SPECIFICFORMATS = "SPECIFICFORMATS"
 
 g = {TREELINEPATH: None,
      INJECTIONSPECPATH: None,
-     PRINTOUTPUT: False}
+     PRINTOUTPUT: False,
+     SPECIFICFORMATS: []}
 
 
 #endregion
@@ -32,7 +34,6 @@ def mid_development():
 #endregion
 #region Argments Parsing
 
-
 desc = "Inject formats into a Treeline .trln document."
 
 def readargs():
@@ -44,10 +45,14 @@ def readargs():
     parser.add_argument("-p", "--print-only",
                         help="Don't modify treeline; Instead, print output",
                         action='store_true')
+    parser.add_argument("-f", "--format",
+                        help="specifically inject this format",
+                        action="append")
     result = parser.parse_args()
     g[INJECTIONSPECPATH] = result.injection
     g[TREELINEPATH] = result.treeline
     g[PRINTOUTPUT] = result.print_only
+    g[SPECIFICFORMATS] = result.format
 
 
 #endregion
